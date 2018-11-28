@@ -12,7 +12,7 @@
 # compose tar.xz name and release
 %define kernelversion	4
 %define patchlevel	18
-%define sublevel	17
+%define sublevel	20
 %define relc		%{nil}
 # Only ever wrong on x.0 releases...
 %define previous	%{kernelversion}.%(echo $((%{patchlevel}-1)))
@@ -39,7 +39,7 @@
 %if 0%{relc}
 %define kname		kernel-rc
 %else
-%define kname		kernel-release
+%define kname		kernel4.18
 %endif
 
 # fakerel and fakever never change, they are used to fool
