@@ -12,7 +12,7 @@
 # compose tar.xz name and release
 %define kernelversion	4
 %define patchlevel	18
-%define sublevel	20
+%define sublevel	3
 %define relc		%{nil}
 # Only ever wrong on x.0 releases...
 %define previous	%{kernelversion}.%(echo $((%{patchlevel}-1)))
@@ -343,6 +343,9 @@ Patch310:	https://github.com/sirlucjan/kernel-patches/raw/master/4.18/gcc-patch-
 
 # BFQ-MQ
 Patch320:	https://github.com/sirlucjan/kernel-patches/raw/master/4.18/bfq-sq-mq/4.18-bfq-sq-mq-v8r12-2K180817.patch
+# Ported from https://marc.info/?l=linux-crypto-vger&m=153436754612783&q=raw
+Patch333:       workaround-udev-on-ryzen.patch
+
 
 # Patches to external modules
 # Marked SourceXXX instead of PatchXXX because the modules
