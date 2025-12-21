@@ -414,6 +414,7 @@ very current hardware.
 
 Autoreqprov:	no
 %if %{with build_modzstd}
+BuildRequires:	make
 BuildRequires:	zstd
 %endif
 %if %{with build_modxz}
